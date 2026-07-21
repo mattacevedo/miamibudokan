@@ -335,15 +335,24 @@
   .lineage{margin-top:clamp(56px,7vw,92px)}
   .lineage .label{color:var(--t-on-washi-muted)}
   .lineage-intro{margin-top:22px;color:var(--t-on-washi-muted);font-size:14.5px;max-width:56ch}
-  .tree-scroll{overflow-x:auto;margin:clamp(36px,5vw,56px) auto 0;max-width:760px}
-  .tree-svg{display:block;width:100%;min-width:560px;height:auto}
-  .tree-svg .tn{font-family:var(--serif);font-weight:570;font-size:24px;fill:var(--t-on-washi)}
-  .tree-svg .tn-root{font-size:26px}
-  .tree-svg .tn-shihan{fill:var(--shu)}
-  .tree-svg .ts{font-family:var(--sans);font-size:13px;fill:var(--t-on-washi-muted);letter-spacing:.6px}
-  .tree-svg .ln{stroke:rgba(28,34,46,.4);stroke-width:1.2;fill:none}
-  .tree-svg .ln-d{stroke:rgba(28,34,46,.45);stroke-width:1.2;fill:none;stroke-dasharray:5 5}
-  .tree-svg .ph{stroke:rgba(28,34,46,.25);fill:none;stroke-width:1}
+  .tree-scroll{margin:clamp(36px,5vw,56px) auto 0;max-width:760px}
+  .tree-svg{display:block;width:100%;height:auto}
+  .tree-svg-m{display:none}
+  @media (max-width:600px){
+    .tree-svg{display:none}
+    .tree-svg-m{display:block;width:100%;height:auto}
+  }
+  svg.tree-svg-m .tn{font-size:17px}
+  svg.tree-svg-m .tn-root{font-size:19px}
+  svg.tree-svg-m .tn3{font-size:14px}
+  svg.tree-svg-m .ts{font-size:10.5px;letter-spacing:.3px}
+  .tree-chart .tn{font-family:var(--serif);font-weight:570;font-size:24px;fill:var(--t-on-washi)}
+  .tree-chart .tn-root{font-size:26px}
+  .tree-chart .tn-shihan{fill:var(--shu)}
+  .tree-chart .ts{font-family:var(--sans);font-size:13px;fill:var(--t-on-washi-muted);letter-spacing:.6px}
+  .tree-chart .ln{stroke:rgba(28,34,46,.4);stroke-width:1.2;fill:none}
+  .tree-chart .ln-d{stroke:rgba(28,34,46,.45);stroke-width:1.2;fill:none;stroke-dasharray:5 5}
+  .tree-chart .ph{stroke:rgba(28,34,46,.25);fill:none;stroke-width:1}
   .lineage-legend{margin-top:18px;font-size:12.5px;color:var(--t-on-washi-muted);text-align:center}
 
   /* ============ Philosophy ============ */
