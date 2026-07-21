@@ -347,7 +347,6 @@
   .tree-chart .ln{stroke:rgba(28,34,46,.4);stroke-width:1.2;fill:none}
   .tree-chart .ln-d{stroke:rgba(28,34,46,.45);stroke-width:1.2;fill:none;stroke-dasharray:5 5}
   .tree-chart .ph{stroke:rgba(28,34,46,.25);fill:none;stroke-width:1}
-  .lineage-legend{margin-top:18px;font-size:12.5px;color:var(--t-on-washi-muted);text-align:center}
 
   /* ============ Philosophy ============ */
   .philo{padding:clamp(90px,12vw,160px) 0;position:relative;overflow:hidden}
