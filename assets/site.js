@@ -139,17 +139,27 @@
     }, {passive:true});
   }
 
-  /* hero video: fades in over the photo placeholder once a real hero.mp4 exists */
+  /* hero video: fade the film up as soon as any frame is decodable */
   var video = document.getElementById('heroVideo'), hero = document.querySelector('.hero');
-  function goLive(){
-    hero.classList.add('video-live');
+  function showFilm(){ hero.classList.add('video-live'); }
+  function tryPlay(){
+    if(!video.paused) return;
     var p = video.play();
-    if(p && p.catch) p.catch(function(){ hero.classList.remove('video-live'); });
+    if(p && p.catch) p.catch(function(){});
   }
   if(video){
-    video.src = matchMedia('(max-width:700px)').matches ?
-      video.dataset.srcMobile : video.dataset.srcDesktop;
-    video.addEventListener('canplay', goLive);
-    if(video.readyState >= 3) goLive();
+    ['canplay','loadeddata','playing'].forEach(function(ev){
+      video.addEventListener(ev, showFilm);
+    });
+    var vpoll = setInterval(function(){
+      if(video.readyState >= 2){ showFilm(); tryPlay(); clearInterval(vpoll); }
+    }, 300);
+    setTimeout(function(){ clearInterval(vpoll); }, 20000);
+    if(video.readyState >= 2) showFilm();
+    tryPlay();
+    /* low-power modes block autoplay; first touch starts the film */
+    ['touchend','click'].forEach(function(ev){
+      document.addEventListener(ev, tryPlay, {once:true, passive:true});
+    });
   }
 })();

@@ -48,6 +48,8 @@
         swap the files: H.264 MP4 · muted · looping · roughly 10 MB each. -->
       <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="auto"
         data-src-desktop="hero.mp4" data-src-mobile="hero-mobile.mp4"></video>
+      <script>(function(){var v=document.getElementById('heroVideo');
+        v.src=matchMedia('(max-width:700px)').matches?v.dataset.srcMobile:v.dataset.srcDesktop;})()</script>
     </div>
     <div class="hero-kanji" aria-hidden="true"><span lang="ja">居合道</span><i>iaidō</i></div>
     <div class="hero-inner">
