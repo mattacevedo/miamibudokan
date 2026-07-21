@@ -125,7 +125,7 @@
     smoothTo(id === 'top' ? 0 : el.getBoundingClientRect().top + scrollY - 72);
   });
 
-  /* gentle hero parallax (on the media container; the img keeps its ken-burns transform) */
+  /* subtle hero parallax (on the media container; the img keeps its ken-burns transform) */
   var media = document.getElementById('heroMedia');
   if(!prefersReduced && media){
     var ticking = false;
