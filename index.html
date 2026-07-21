@@ -7,6 +7,8 @@
 <title>Miami Budokan · Traditional Japanese Swordsmanship in Miami</title>
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" type="image/png" href="assets/img/enso.png">
+<noscript><link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/img/enso.png"></noscript>
 
 <a class="skip" href="#main">Skip to content</a>
 <div class="grain" aria-hidden="true"></div>
@@ -40,12 +42,12 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
     <div class="hero-media" id="heroMedia" aria-hidden="true">
-      <!-- HERO FILM: hero.mp4 sits next to this file. It fades up from the
-        dark background once it can play. To replace it, swap the file:
-        H.264 MP4 · 1920 wide · muted · looping · under ~10 MB. -->
-      <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="auto">
-        <source src="hero.mp4" type="video/mp4">
-      </video>
+      <!-- HERO FILM: hero.mp4 (landscape) and hero-mobile.mp4 (portrait)
+        sit next to this file; the script below picks one by screen size.
+        Both fade up from the dark background once playable. To replace,
+        swap the files: H.264 MP4 · muted · looping · roughly 10 MB each. -->
+      <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="auto"
+        data-src-desktop="hero.mp4" data-src-mobile="hero-mobile.mp4"></video>
     </div>
     <div class="hero-kanji" aria-hidden="true"><span lang="ja">居合道</span><i>iaidō</i></div>
     <div class="hero-inner">

@@ -147,6 +147,8 @@
     if(p && p.catch) p.catch(function(){ hero.classList.remove('video-live'); });
   }
   if(video){
+    video.src = matchMedia('(max-width:700px)').matches ?
+      video.dataset.srcMobile : video.dataset.srcDesktop;
     video.addEventListener('canplay', goLive);
     if(video.readyState >= 3) goLive();
   }
