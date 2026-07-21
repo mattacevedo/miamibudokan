@@ -626,8 +626,6 @@
     user-select:none;line-height:1;pointer-events:none;
   }
   .contact .wrap{position:relative}
-  .contact .label{justify-content:center;color:var(--t-on-ink-muted)}
-  .contact .label::before{content:"";height:1px;width:44px;background:currentColor;opacity:.4}
   .contact h2{
     font-size:clamp(44px,7vw,92px);font-weight:530;letter-spacing:-.005em;line-height:1.04;
     margin:28px auto 22px;max-width:14ch;
@@ -635,7 +633,7 @@
   .contact h2 em{font-style:italic}
   .contact>.wrap>p{color:var(--t-on-ink-muted);max-width:54ch;margin:0 auto}
   .contact-cta{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:44px}
-  .contact-alt{margin-top:64px;font-size:14px;color:var(--t-on-ink-muted)}
+  .contact>.wrap>.contact-alt{margin:64px auto 0;font-size:14px;color:var(--t-on-ink-muted)}
   .contact-alt a{color:var(--t-on-ink);text-decoration:none;border-bottom:1px solid var(--line-ink);transition:border-color .25s}
   .contact-alt a:hover{border-color:var(--t-on-ink)}
 
