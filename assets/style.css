@@ -211,6 +211,9 @@
     opacity:0;transition:opacity 1.2s ease;
   }
   .hero.video-live .hero-video{opacity:1}
+  @media (max-width:700px){
+    .hero-video{object-position:100% 30%}
+  }
   .hero-media::after{
     content:"";position:absolute;inset:0;
     background:
